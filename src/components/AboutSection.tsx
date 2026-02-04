@@ -37,7 +37,7 @@ const AboutSection = () => {
                 <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
                   {fact.label}
                 </p>
-                <p className="text-foreground font-semibold">
+                <p className="text-foreground font-semibold text-sm break-words hyphens-auto">
                   {fact.value}
                 </p>
               </div>
