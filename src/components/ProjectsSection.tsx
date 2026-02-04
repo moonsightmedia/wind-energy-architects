@@ -1,4 +1,5 @@
-import { ChevronDown } from "lucide-react";
+import type { CSSProperties } from "react";
+
 import {
   Accordion,
   AccordionContent,
@@ -84,25 +85,17 @@ const ProjectsSection = () => {
             <div key={index} className="card-project flex flex-col">
               {/* Image with badges */}
               <div className="relative aspect-[4/3] overflow-hidden group">
-                <div
-                  className="h-full w-full"
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                   style={
-                    project.imageRotationDeg
-                      ? {
-                          transform: `rotate(${project.imageRotationDeg}deg)`,
-                          transformOrigin: "center",
-                        }
-                      : undefined
+                    {
+                      ["--tw-rotate" as any]: `${project.imageRotationDeg ?? 0}deg`,
+                      transformOrigin: "center",
+                    } as CSSProperties
                   }
-                >
-                  <div className="h-full w-full transition-transform duration-300 group-hover:scale-105">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+                />
                 {/* Year Badge */}
                 <Badge
                   variant="secondary"
