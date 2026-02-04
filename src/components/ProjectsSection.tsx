@@ -20,6 +20,7 @@ interface Project {
   year: string;
   isRepowering?: boolean;
   details?: string;
+  imageRotation?: string;
 }
 
 const projects: Project[] = [
@@ -48,6 +49,7 @@ const projects: Project[] = [
     client: "Steag GmbH / RWE",
     turbines: "1x E-138 EP3 auf 131m Hybridturm",
     year: "2021",
+    imageRotation: "rotate-180",
     details:
       "Anlieferung der Rotorblätter mit einem Selbstfahrer (SPMT). In enger Absprache mit der Gemeinde und der Stadt konnte die Verladung auf einer Straße in einem Industriegebiet durchgeführt werden, sodass keine Logistikfläche (Umladeplatz) benötigt wurde. Die Zufahrt zur Halde war besonders hinsichtlich der Freigabe des Bodengutachters inkl. Böschungsbruchberechnung.",
   },
@@ -84,7 +86,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${project.imageRotation || ""}`}
                 />
                 {/* Year Badge */}
                 <Badge
