@@ -60,6 +60,7 @@ const projects: Project[] = [
     turbines: "2x E-103 EP2 auf 108m Hybridturm",
     year: "2023",
     isRepowering: true,
+    imageRotation: "rotate-90",
     details:
       "Standort der Bestandsanlage (E-66) befand sich ca. 50m von einer neu geplanten WEA. In Absprache mit allen Beteiligten konnte die neue WEA noch während des Turmbaus drehen, um die Stromerträge für den Betreiber zu maximieren.",
   },
