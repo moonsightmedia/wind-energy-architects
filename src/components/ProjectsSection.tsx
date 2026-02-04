@@ -84,17 +84,24 @@ const ProjectsSection = () => {
             <div key={index} className="card-project flex flex-col">
               {/* Image with badges */}
               <div className="relative aspect-[4/3] overflow-hidden group">
-                <div className="h-full w-full transition-transform duration-300 group-hover:scale-105">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    style={
-                      project.imageRotationDeg
-                        ? { transform: `rotate(${project.imageRotationDeg}deg)` }
-                        : undefined
-                    }
-                  />
+                <div
+                  className="h-full w-full"
+                  style={
+                    project.imageRotationDeg
+                      ? {
+                          transform: `rotate(${project.imageRotationDeg}deg)`,
+                          transformOrigin: "center",
+                        }
+                      : undefined
+                  }
+                >
+                  <div className="h-full w-full transition-transform duration-300 group-hover:scale-105">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 {/* Year Badge */}
                 <Badge
