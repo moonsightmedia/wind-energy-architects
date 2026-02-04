@@ -5,7 +5,7 @@ const facts = [
   { icon: Wind, label: "Windparkprojekte", value: "80+" },
   { icon: Building2, label: "Betreute Anlagen", value: "150+" },
   { icon: Globe, label: "Aktiv in", value: "DE, NL, AT" },
-  { icon: CheckCircle, label: "Status", value: "Herstellerunabhängig" },
+  { icon: CheckCircle, label: "Status", value: "Herstellerun-\nabhängig" },
 ];
 
 const AboutSection = () => {
@@ -37,7 +37,7 @@ const AboutSection = () => {
                 <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
                   {fact.label}
                 </p>
-                <p className="text-foreground font-semibold text-sm break-words hyphens-auto">
+                <p className="text-foreground font-semibold text-sm whitespace-pre-line">
                   {fact.value}
                 </p>
               </div>
