@@ -7,6 +7,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import AnimateInView from "@/components/AnimateInView";
 
 const Index = () => {
   return (
@@ -14,11 +15,21 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <BenefitsSection />
-        <ProjectsSection />
-        <ContactSection />
+        <AnimateInView delay={0}>
+          <ServicesSection />
+        </AnimateInView>
+        <AnimateInView delay={50}>
+          <AboutSection />
+        </AnimateInView>
+        <AnimateInView delay={100}>
+          <BenefitsSection />
+        </AnimateInView>
+        <AnimateInView delay={100}>
+          <ProjectsSection />
+        </AnimateInView>
+        <AnimateInView delay={50}>
+          <ContactSection />
+        </AnimateInView>
       </main>
       <Footer />
       <BackToTop />

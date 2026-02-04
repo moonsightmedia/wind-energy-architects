@@ -123,6 +123,12 @@
   p {
     @apply leading-relaxed;
   }
+
+  /* Focus-visible polish for keyboard/screen reader users */
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background rounded-sm;
+  }
 }
 
 @layer components {
@@ -135,11 +141,20 @@
   }
 
   .card-service {
-    @apply bg-card p-6 md:p-8 rounded-md shadow-sm border border-border transition-shadow duration-200 hover:shadow-md;
+    @apply bg-card p-6 md:p-8 rounded-md shadow-sm border border-border transition-all duration-300 ease-out hover:shadow-md hover:border-primary/20;
   }
 
   .card-project {
-    @apply bg-card rounded-md overflow-hidden shadow-sm border border-border transition-shadow duration-200 hover:shadow-md;
+    @apply bg-card rounded-md overflow-hidden shadow-sm border border-border transition-all duration-300 ease-out hover:shadow-md hover:border-primary/20;
+  }
+
+  /* Subtle scroll-in animation */
+  .animate-in-view {
+    @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
+  }
+
+  .animate-in-view.visible {
+    @apply opacity-100 translate-y-0;
   }
 
   .icon-primary {
@@ -148,5 +163,21 @@
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Subtle hero content fade-in on load */
+  .animate-hero-in {
+    animation: heroFadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes heroFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

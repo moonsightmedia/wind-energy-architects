@@ -25,11 +25,12 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section id="mehrwert" className="section-padding bg-card">
+    <section id="mehrwert" className="section-padding bg-primary/5">
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-foreground mb-4">Unser Mehrwert</h2>
+          <h2 className="text-foreground mb-2">Unser Mehrwert</h2>
+          <div className="w-16 h-0.5 bg-primary mx-auto mb-4" aria-hidden />
           <p className="text-muted-foreground text-lg">
             Was Sie durch die Zusammenarbeit mit GRAU Engineering gewinnen.
           </p>

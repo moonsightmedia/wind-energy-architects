@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { company, companyAddressLines } from "@/lib/company";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -7,11 +10,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {/* Company Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">GRAU Engineering GmbH</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">{company.name}</h4>
             <address className="not-italic text-white/80 text-sm leading-relaxed">
-              Musterstraße 123<br />
-              58636 Iserlohn<br />
-              Deutschland
+              {companyAddressLines.map((line) => (
+                <span key={line}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </address>
           </div>
 
@@ -20,22 +26,22 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#leistungen" className="text-white/80 hover:text-white text-sm transition-colors">
+                <a href="#leistungen" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Leistungen
                 </a>
               </li>
               <li>
-                <a href="#ueber-uns" className="text-white/80 hover:text-white text-sm transition-colors">
+                <a href="#ueber-uns" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Über uns
                 </a>
               </li>
               <li>
-                <a href="#projekte" className="text-white/80 hover:text-white text-sm transition-colors">
+                <a href="#projekte" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Projekte
                 </a>
               </li>
               <li>
-                <a href="#kontakt" className="text-white/80 hover:text-white text-sm transition-colors">
+                <a href="#kontakt" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Kontakt
                 </a>
               </li>
@@ -47,14 +53,14 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Rechtliches</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#impressum" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/impressum" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Impressum
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#datenschutz" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/datenschutz" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Datenschutz
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -63,7 +69,7 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-white/20 pt-8">
           <p className="text-white/60 text-sm text-center">
-            © {currentYear} GRAU Engineering GmbH. Alle Rechte vorbehalten.
+            © {currentYear} {company.name}. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
+import { company } from "@/lib/company";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -34,10 +35,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="kontakt" className="section-padding bg-muted">
+    <section id="kontakt" className="section-padding bg-primary/5">
       <div className="container-narrow mx-auto">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12 md:mb-16">
+        <div className="max-w-2xl mb-12 md:mb-16 border-l-4 border-primary pl-6">
           <h2 className="text-foreground mb-4">Kontakt</h2>
           <p className="text-muted-foreground text-lg">
             Sie planen ein Windenergieprojekt oder benötigen Unterstützung bei einem laufenden Bauvorhaben? Sprechen Sie uns gern an.
@@ -49,26 +50,26 @@ const ContactSection = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-4">
-                GRAU Engineering GmbH
+                {company.name}
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <p className="text-foreground">Musterstraße 123</p>
-                    <p className="text-foreground">58636 Iserlohn</p>
+                    <p className="text-foreground">{company.address.street}</p>
+                    <p className="text-foreground">{company.address.zip} {company.address.city}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={1.5} />
-                  <a href="tel:+492371123456" className="text-foreground hover:text-primary transition-colors">
-                    +49 (0) 2371 123456
+                  <a href={`tel:${company.phoneHref}`} className="text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm">
+                    {company.phone}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={1.5} />
-                  <a href="mailto:info@grau-engineering.de" className="text-foreground hover:text-primary transition-colors">
-                    info@grau-engineering.de
+                  <a href={`mailto:${company.email}`} className="text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm">
+                    {company.email}
                   </a>
                 </div>
               </div>

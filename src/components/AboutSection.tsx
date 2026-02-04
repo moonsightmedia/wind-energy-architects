@@ -10,13 +10,14 @@ const facts = [
 
 const AboutSection = () => {
   return (
-    <section id="ueber-uns" className="section-padding bg-card">
+    <section id="ueber-uns" className="section-padding bg-card border-t border-border">
       <div className="container-narrow mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Text Content */}
-          <div>
+          {/* Text Content with left accent */}
+          <div className="border-l-4 border-primary pl-6">
+            <p className="text-xs uppercase tracking-wide text-primary mb-2">Über uns</p>
             <h2 className="text-foreground mb-6">
-              Über uns – GRAU Engineering GmbH
+              GRAU Engineering GmbH
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Die GRAU Engineering GmbH ist ein unabhängiges Ingenieurbüro mit Sitz in Iserlohn im Sauerland. Seit 2020 begleiten wir Betreiberfirmen, Stadtwerke und Projektgesellschaften bei der Umsetzung von Windenergieprojekten in Deutschland und Europa.

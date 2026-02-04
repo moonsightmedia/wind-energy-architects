@@ -46,7 +46,9 @@ const ServicesSection = () => {
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 md:mb-16">
-          <h2 className="text-foreground mb-6">Unser Leistungsangebot</h2>
+          <p className="text-xs uppercase tracking-wide text-primary mb-2">Leistungen</p>
+          <h2 className="text-foreground mb-2">Unser Leistungsangebot</h2>
+          <div className="w-16 h-0.5 bg-primary mb-6" aria-hidden />
           <p className="text-muted-foreground text-lg leading-relaxed">
             Wir übernehmen das vollständige Projekt- und Baustellenmanagement rund um den Bau von Windenergieanlagen und koordinieren alle Beteiligten bis zur Inbetriebnahme.
           </p>

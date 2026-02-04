@@ -50,7 +50,6 @@ const projects: Project[] = [
     client: "Steag GmbH / RWE",
     turbines: "1x E-138 EP3 auf 131m Hybridturm",
     year: "2021",
-    imageRotationDeg: 180,
     details:
       "Anlieferung der Rotorblätter mit einem Selbstfahrer (SPMT). In enger Absprache mit der Gemeinde und der Stadt konnte die Verladung auf einer Straße in einem Industriegebiet durchgeführt werden, sodass keine Logistikfläche (Umladeplatz) benötigt wurde. Die Zufahrt zur Halde war besonders hinsichtlich der Freigabe des Bodengutachters inkl. Böschungsbruchberechnung.",
   },
@@ -69,10 +68,11 @@ const projects: Project[] = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projekte" className="section-padding bg-muted">
+    <section id="projekte" className="section-padding bg-card">
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+          <p className="text-xs uppercase tracking-wide text-muted-foreground mb-2">Referenzen</p>
           <h2 className="text-foreground mb-4">Projekte & Referenzen</h2>
           <p className="text-muted-foreground text-lg">
             Ausgewählte Projekte aus unserem Portfolio im Bereich Windenergie.
@@ -88,12 +88,18 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   style={
-                    {
-                      ["--tw-rotate" as any]: `${project.imageRotationDeg ?? 0}deg`,
-                      transformOrigin: "center",
-                    } as CSSProperties
+                    project.imageRotationDeg != null
+                      ? ({
+                          left: "50%",
+                          top: "50%",
+                          width: "auto",
+                          height: "140%",
+                          transform: `translate(-50%, -50%) rotate(${project.imageRotationDeg}deg) scale(1.34)`,
+                          transformOrigin: "center center",
+                        } as CSSProperties)
+                      : undefined
                   }
                 />
                 {/* Year Badge */}

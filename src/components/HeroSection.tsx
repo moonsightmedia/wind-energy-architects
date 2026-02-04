@@ -18,7 +18,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container-narrow mx-auto px-4 md:px-8 lg:px-16 pt-24 md:pt-32">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl animate-hero-in">
           {/* Headline */}
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
             Projekt- & Baustellenmanagement für Windenergieanlagen
