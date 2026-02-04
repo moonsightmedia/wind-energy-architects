@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {/* Company Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">GRAU Engineering GmbH</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">GRAU Engineering GmbH</h4>
             <address className="not-italic text-white/80 text-sm leading-relaxed">
               Musterstraße 123<br />
               58636 Iserlohn<br />
@@ -17,7 +17,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Navigation</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Navigation</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#leistungen" className="text-white/80 hover:text-white text-sm transition-colors">
@@ -44,7 +44,7 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Rechtliches</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Rechtliches</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#impressum" className="text-white/80 hover:text-white text-sm transition-colors">
