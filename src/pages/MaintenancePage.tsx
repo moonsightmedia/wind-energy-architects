@@ -102,6 +102,8 @@ const MaintenancePage = () => {
                   className="text-foreground hover:text-primary transition-colors text-[10px] md:text-sm block leading-tight"
                 >
                   <address className="not-italic">
+                    {company.name}
+                    <br />
                     {companyAddressLines.map((line) => (
                       <span key={line}>
                         {line}

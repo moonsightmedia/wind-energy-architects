@@ -11,8 +11,8 @@ export const company = {
     country: "Deutschland",
   },
   email: "info@grau-eng.de",
-  phone: "+49 (0) 2371 123456", // Placeholder – replace with real number
-  phoneHref: "+492371123456", // For tel: links (no spaces/parentheses)
+  phone: "+49 172 3211514",
+  phoneHref: "+491723211514", // For tel: links (no spaces/parentheses)
 } as const;
 
 export const companyAddressLines = [
