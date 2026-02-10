@@ -4,35 +4,38 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Mehr Projekte realisieren",
-    description: "Mit professionellem Projektmanagement steigern Sie Ihre Umsetzungskapazität."
+    description: "Steigerung Ihrer Projektabschlüsse durch externe Kapazitäten."
   },
   {
     icon: ShieldCheck,
-    title: "Kosten- & Planungssicherheit",
-    description: "Transparente Budgetkontrolle und verlässliche Terminplanung von Anfang an."
+    title: "Kosten- und Planungssicherheit",
+    description: "Transparente Budgetkontrolle, verlässliche Terminplanung und Reduzierung interner Ressourcen."
   },
   {
     icon: Clock,
-    title: "Schnellere Projektabwicklung",
-    description: "Effiziente Prozesse und erfahrene Koordination verkürzen Ihre Projektlaufzeiten."
+    title: "Optimierte Projektabwicklung",
+    description: "Effiziente Projekt- und Bauabläufe durch langjährige Expertise und kostenoptimierte Prozesse."
   },
   {
     icon: UserCheck,
-    title: "Ein zentraler Ansprechpartner",
-    description: "Wir bündeln alle Fäden und halten Ihnen den Rücken frei für Ihr Kerngeschäft."
+    title: "Flexibilität ohne Abhängigkeiten",
+    description: "Reduzierung interner Personalkosten und ressourcenschonende Umsetzung von Projekten."
   }
 ];
 
 const BenefitsSection = () => {
   return (
-    <section id="mehrwert" className="section-padding bg-primary/5">
+    <section id="mehrwert" className="section-padding bg-primary/5 scroll-mt-24">
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+          <p className="text-primary text-lg md:text-xl italic font-medium mb-6">
+            „Bauen Sie noch, oder produzieren Sie schon?!"
+          </p>
           <h2 className="text-foreground mb-2">Unser Mehrwert</h2>
           <div className="w-16 h-0.5 bg-primary mx-auto mb-4" aria-hidden />
           <p className="text-muted-foreground text-lg">
-            Was Sie durch die Zusammenarbeit mit GRAU Engineering gewinnen.
+            Ihre Vorteile für eine gemeinsame Zusammenarbeit
           </p>
         </div>
 

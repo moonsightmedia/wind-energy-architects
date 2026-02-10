@@ -1,17 +1,12 @@
 import type { CSSProperties } from "react";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 
 import hohenlimburg from "@/assets/projects/hohenlimburg.jpg";
 import neuenrade from "@/assets/projects/neuenrade.jpg";
 import haldeMottbruch from "@/assets/projects/halde-mottbruch.jpg";
 import bottrop from "@/assets/projects/bottrop.jpg";
+import schalksmuehleRoeolvede from "@/assets/IMG_1543.jpeg";
 
 interface Project {
   image: string;
@@ -20,7 +15,7 @@ interface Project {
   turbines: string;
   year: string;
   isRepowering?: boolean;
-  details?: string;
+  demontage?: string;
   imageRotationDeg?: number;
 }
 
@@ -28,21 +23,27 @@ const projects: Project[] = [
   {
     image: hohenlimburg,
     title: "Windpark Hohenlimburg",
-    client: "SL NaturEnergie GmbH",
-    turbines: "4x E-138 EP3 E2 auf 160m/149m Hybridturm",
+    client: "SL Windenergie GmbH",
+    turbines: "4x ENERCON E-138 EP3 E2",
     year: "2024",
     isRepowering: true,
-    details:
-      "Optimierung der Logistikfläche hinsichtlich der Möglichkeiten, die Zwischenlagerung von Anlagenkomponenten zu erhöhen. Ursprünglich 2 Blattsätze (6 Rotorblätter) hin zu 5 Blattsätzen (15 bzw. 16 Rotorblätter) und weiterer Komponenten.",
+    demontage: "1x ENERCON E-66 / 18.70",
+  },
+  {
+    image: schalksmuehleRoeolvede,
+    title: "Windpark Schalksmühle Rölvede",
+    client: "Ruhrwind GmbH & Co. KG",
+    turbines: "1x ENERCON E-138 EP3 E3",
+    year: "2025",
+    isRepowering: true,
+    demontage: "1x Repower MD77",
   },
   {
     image: neuenrade,
     title: "Windpark Neuenrade",
-    client: "SL NaturEnergie GmbH",
-    turbines: "6x E-115 E1 auf 149m Hybridturm",
+    client: "SL Windenergie GmbH",
+    turbines: "6x ENERCON E-115 E1",
     year: "2021",
-    details:
-      "Bedingt durch den Standort war kein Ausbau der Stellflächen nach Spezifikation möglich. Anlagen mit ca. 55m Rotorblattlänge wurden auf Stellflächen von teilweise nur 40x35m errichtet. Anlagenkomponenten wurden an separater Stelle vormontiert und 'just-in-time' zur Kranstellfläche transportiert - deutschlandweit einzigartig.",
   },
   {
     image: haldeMottbruch,
@@ -50,8 +51,6 @@ const projects: Project[] = [
     client: "Steag GmbH / RWE",
     turbines: "1x E-138 EP3 auf 131m Hybridturm",
     year: "2021",
-    details:
-      "Anlieferung der Rotorblätter mit einem Selbstfahrer (SPMT). In enger Absprache mit der Gemeinde und der Stadt konnte die Verladung auf einer Straße in einem Industriegebiet durchgeführt werden, sodass keine Logistikfläche (Umladeplatz) benötigt wurde. Die Zufahrt zur Halde war besonders hinsichtlich der Freigabe des Bodengutachters inkl. Böschungsbruchberechnung.",
   },
   {
     image: bottrop,
@@ -61,14 +60,12 @@ const projects: Project[] = [
     year: "2023",
     isRepowering: true,
     imageRotationDeg: 90,
-    details:
-      "Standort der Bestandsanlage (E-66) befand sich ca. 50m von einer neu geplanten WEA. In Absprache mit allen Beteiligten konnte die neue WEA noch während des Turmbaus drehen, um die Stromerträge für den Betreiber zu maximieren.",
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <section id="projekte" className="section-padding bg-card">
+    <section id="projekte" className="section-padding bg-card scroll-mt-24">
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
@@ -80,7 +77,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="card-project flex flex-col">
               {/* Image with badges */}
@@ -123,24 +120,15 @@ const ProjectsSection = () => {
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-1">
-                  {project.client}
+                  Bauherr: {project.client}
                 </p>
-                <p className="text-muted-foreground text-xs mb-3">
-                  {project.turbines}
+                <p className="text-muted-foreground text-xs mb-1">
+                  Anlagen: {project.turbines}
                 </p>
-
-                {/* Accordion for Details */}
-                {project.details && (
-                  <Accordion type="single" collapsible className="mt-auto">
-                    <AccordionItem value="details" className="border-b-0">
-                      <AccordionTrigger className="py-2 text-sm text-primary hover:no-underline">
-                        Besonderheiten
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground text-xs leading-relaxed">
-                        {project.details}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
+                {project.demontage && (
+                  <p className="text-muted-foreground text-xs">
+                    Demontage: {project.demontage}
+                  </p>
                 )}
               </div>
             </div>

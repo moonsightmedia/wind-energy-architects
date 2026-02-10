@@ -3,54 +3,54 @@ import {
   Users, 
   Shield, 
   Calculator, 
-  FileText, 
+  Eye,
   RefreshCw 
 } from "lucide-react";
 
 const services = [
   {
     icon: ClipboardList,
-    title: "Projekt- & Baustellenmanagement",
-    description: "Vollständige Koordination und Steuerung aller Bauphasen von der Planung bis zur Inbetriebnahme."
-  },
-  {
-    icon: Users,
-    title: "Koordination aller Gewerke",
-    description: "Zentrale Abstimmung zwischen Herstellern, Zulieferern und ausführenden Unternehmen."
+    title: "Projekt- und Baustellenmanagement",
+    description: "Termingerechte und kostenoptimierte Planung und Koordinierung von allen Bauphasen bis zur Inbetriebnahme."
   },
   {
     icon: Shield,
-    title: "HSE & Qualitätssicherung",
-    description: "Sicherstellung von Arbeitsschutz, Gesundheit und Umweltstandards auf der Baustelle."
+    title: "HSE und Qualitätssicherung",
+    description: "Qualitätskontrollen und Sicherstellung eines rechtssicheren Baustellenbetriebes. -SiFa gemäß DGUV V2 -SiGeKo gemäß BaustellV"
+  },
+  {
+    icon: Users,
+    title: "Stakeholder-Management",
+    description: "Interessensvertretung und Hauptansprechpartner für alle Zulieferer, ausführenden Unternehmen, Behörden und weitere Projektbeteiligten."
+  },
+  {
+    icon: Eye,
+    title: "Bauüberwachung",
+    description: "Koordination und Abnahmen von Fundamenten, Kranstellflächen, Zuwegungen und der elektrischen Infrastruktur."
   },
   {
     icon: Calculator,
-    title: "Kosten- & Termincontrolling",
-    description: "Transparente Überwachung von Budget und Zeitplan mit regelmäßigem Reporting."
-  },
-  {
-    icon: FileText,
-    title: "Dokumentation & Reporting",
-    description: "Lückenlose Projektdokumentation und regelmäßige Statusberichte für alle Stakeholder."
+    title: "Kosten- und Termincontrolling",
+    description: "Transparente Überwachung und Optimierung des Budgets und Bauablaufs sowie eine lückenlose Dokumentation inkl. Statusberichten."
   },
   {
     icon: RefreshCw,
-    title: "Repowering & Sonderprojekte",
-    description: "Begleitung von Anlagen-Erneuerungen und komplexen Sonderstandorten."
+    title: "Repowering und Sonderprojekte",
+    description: "Errichtung von Windenergieanlagen und Demontage von Bestandsanlagen – auch an komplexen Standorten mit anspruchsvoller Infrastruktur."
   }
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="leistungen" className="section-padding bg-muted">
+    <section id="leistungen" className="section-padding bg-muted scroll-mt-24">
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 md:mb-16">
           <p className="text-xs uppercase tracking-wide text-primary mb-2">Leistungen</p>
-          <h2 className="text-foreground mb-2">Unser Leistungsangebot</h2>
+          <h2 className="text-foreground mb-2">Was wir Ihnen bieten</h2>
           <div className="w-16 h-0.5 bg-primary mb-6" aria-hidden />
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Wir übernehmen das vollständige Projekt- und Baustellenmanagement rund um den Bau von Windenergieanlagen und koordinieren alle Beteiligten bis zur Inbetriebnahme.
+            Wir übernehmen gerne die gesamte Planung und Umsetzung Ihres Bauvorhabens – von der Spätphase der Baugenehmigung bis zur Schlüsselfertigen Windenergieanlage. Alle Leistungen können auch einzeln in Anspruch genommen werden.
           </p>
         </div>
 

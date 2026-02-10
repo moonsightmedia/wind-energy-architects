@@ -26,8 +26,32 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = () => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setMobileMenuOpen(false);
+    
+    // Handle hash links with scroll offset
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      
+      // Always navigate to home first if not on home page
+      if (!isHomePage) {
+        window.location.href = `/${href}`;
+        return;
+      }
+      
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        const headerHeight = 80; // Approximate header height
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
   };
 
   const showSolidNav = !isHomePage || scrolled;
@@ -55,6 +79,29 @@ const Header = () => {
               <li key={link.href}>
                 <a
                   href={isHomePage ? link.href : `/${link.href}`}
+                  onClick={(e) => {
+                    if (link.href.startsWith('#')) {
+                      e.preventDefault();
+                      // Always navigate to home first if not on home page
+                      if (!isHomePage) {
+                        window.location.href = `/${link.href}`;
+                        return;
+                      }
+                      
+                      const targetId = link.href.substring(1);
+                      const targetElement = document.getElementById(targetId);
+                      
+                      if (targetElement) {
+                        const headerHeight = 80;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                          top: targetPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }
+                  }}
                   className="text-white/90 hover:text-white text-sm font-medium transition-colors"
                 >
                   {link.label}
@@ -81,7 +128,7 @@ const Header = () => {
                 <li key={link.href}>
                   <a
                     href={isHomePage ? link.href : `/${link.href}`}
-                    onClick={handleNavClick}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="block px-6 py-3 text-white/90 hover:text-white hover:bg-white/10 text-sm font-medium transition-colors"
                   >
                     {link.label}

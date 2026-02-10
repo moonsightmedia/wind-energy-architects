@@ -35,7 +35,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="kontakt" className="section-padding bg-primary/5">
+    <section id="kontakt" className="section-padding bg-primary/5 scroll-mt-24">
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="max-w-2xl mb-12 md:mb-16 border-l-4 border-primary pl-6">
@@ -121,7 +121,7 @@ const ContactSection = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="bg-card"
-                placeholder="ihre.email@beispiel.de"
+                placeholder="name@beispiel.de"
               />
             </div>
             <div>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-windpark-main.jpg";
+import heroImage from "@/assets/projects/neuenrade.jpg";
 
 const HeroSection = () => {
   return (
@@ -21,17 +21,12 @@ const HeroSection = () => {
         <div className="max-w-3xl animate-hero-in">
           {/* Headline */}
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
-            Projekt- & Baustellenmanagement für Windenergieanlagen
+            GRAU Engineering GmbH
           </h1>
 
           {/* Subheadline */}
           <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-6 max-w-2xl">
-            GRAU Engineering GmbH unterstützt Betreiber, Projektgesellschaften und Investoren bei der Realisierung von Windenergieprojekten – von der Baugenehmigung bis zur schlüsselfertigen Anlage.
-          </p>
-
-          {/* Claim */}
-          <p className="text-white/70 text-base md:text-lg italic mb-10">
-            „Bauen Sie noch, oder produzieren Sie schon?!"
+            Ihr kompetenter Partner für die Realisierung eines erfolgreichen und kosteneffizienten Windenergieprojektes. Wir unterstützen und beraten Sie gerne bei Ihrem Bauvorhaben – von der Baugenehmigung bis zur ersten produzierten Kilowattstunde.
           </p>
 
           {/* CTAs */}
