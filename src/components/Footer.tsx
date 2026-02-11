@@ -47,23 +47,23 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-white">Navigation</h4>
-            <ul className="space-y-2">
-              <li>
+            <ul className="space-y-2 pl-0 list-none m-0">
+              <li className="m-0 p-0">
                 <a href="#leistungen" onClick={(e) => handleHashClick(e, "#leistungen")} className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Leistungen
                 </a>
               </li>
-              <li>
+              <li className="m-0 p-0">
                 <a href="#ueber-uns" onClick={(e) => handleHashClick(e, "#ueber-uns")} className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Über uns
                 </a>
               </li>
-              <li>
+              <li className="m-0 p-0">
                 <a href="#projekte" onClick={(e) => handleHashClick(e, "#projekte")} className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Projekte
                 </a>
               </li>
-              <li>
+              <li className="m-0 p-0">
                 <a href="#kontakt" onClick={(e) => handleHashClick(e, "#kontakt")} className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Kontakt
                 </a>
@@ -74,13 +74,13 @@ const Footer = () => {
           {/* Legal */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-white">Rechtliches</h4>
-            <ul className="space-y-2">
-              <li>
+            <ul className="space-y-2 pl-0 list-none m-0">
+              <li className="m-0 p-0">
                 <Link to="/impressum" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Impressum
                 </Link>
               </li>
-              <li>
+              <li className="m-0 p-0">
                 <Link to="/datenschutz" className="text-white/80 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm">
                   Datenschutz
                 </Link>

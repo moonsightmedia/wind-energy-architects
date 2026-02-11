@@ -160,6 +160,18 @@
     border-radius: 0 !important;
   }
 
+  /* Footer list alignment */
+  footer ul {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  footer li {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    list-style: none;
+  }
+
   /* Subtle scroll-in animation */
   .animate-in-view {
     @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
