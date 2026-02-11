@@ -93,6 +93,16 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8">
           <p className="text-white/60 text-sm text-center">
             © {currentYear} {company.name}. Alle Rechte vorbehalten.
+            <br />
+            Website entwickelt von{" "}
+            <a 
+              href="https://moonsight.media" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#63E6BE] hover:text-[#7FE8C8] transition-colors"
+            >
+              Moonsight Media
+            </a>
           </p>
         </div>
       </div>

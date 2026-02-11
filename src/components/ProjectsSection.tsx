@@ -63,11 +63,12 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div key={index} className="card-project flex flex-col">
               {/* Image with badges */}
-              <div className="relative aspect-[4/3] overflow-hidden group">
+              <div className="relative aspect-[4/3] overflow-hidden group" style={{ borderRadius: 0 }}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-none"
+                  style={{ borderRadius: 0 }}
                   style={
                     project.imageRotationDeg != null
                       ? ({

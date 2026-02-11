@@ -148,7 +148,16 @@
   }
 
   .card-project {
-    @apply bg-card rounded-md overflow-hidden shadow-sm border border-border transition-all duration-300 ease-out hover:shadow-md hover:border-primary/20;
+    @apply bg-card overflow-hidden shadow-sm border border-border transition-all duration-300 ease-out hover:shadow-md hover:border-primary/20;
+    border-radius: 0 !important;
+  }
+  
+  .card-project > div:first-child {
+    border-radius: 0 !important;
+  }
+  
+  .card-project img {
+    border-radius: 0 !important;
   }
 
   /* Subtle scroll-in animation */
