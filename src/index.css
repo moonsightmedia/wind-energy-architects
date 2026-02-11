@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Awesome */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
 /* GRAU Engineering Design System
    B2B Engineering Company - Professional, Calm, Technical
    All colors in HSL format

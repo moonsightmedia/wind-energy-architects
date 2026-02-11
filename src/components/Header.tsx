@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
@@ -15,6 +15,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const isHomePage = pathname === "/";
 
   useEffect(() => {
@@ -35,15 +36,17 @@ const Header = () => {
       
       // Always navigate to home first if not on home page
       if (!isHomePage) {
-        window.location.href = `/${href}`;
+        navigate(`/${href}`, { replace: false });
         return;
       }
       
+      // Update URL hash and scroll to target on home page
+      window.history.pushState(null, '', href);
       const targetId = href.substring(1);
       const targetElement = document.getElementById(targetId);
       
       if (targetElement) {
-        const headerHeight = 80; // Approximate header height
+        const headerHeight = 80;
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
         
         window.scrollTo({
@@ -84,10 +87,12 @@ const Header = () => {
                       e.preventDefault();
                       // Always navigate to home first if not on home page
                       if (!isHomePage) {
-                        window.location.href = `/${link.href}`;
+                        navigate(`/${link.href}`, { replace: false });
                         return;
                       }
                       
+                      // Update URL hash and scroll to target on home page
+                      window.history.pushState(null, '', link.href);
                       const targetId = link.href.substring(1);
                       const targetElement = document.getElementById(targetId);
                       

@@ -3,9 +3,7 @@ import type { CSSProperties } from "react";
 import { Badge } from "@/components/ui/badge";
 
 import hohenlimburg from "@/assets/projects/hohenlimburg.jpg";
-import neuenrade from "@/assets/projects/neuenrade.jpg";
-import haldeMottbruch from "@/assets/projects/halde-mottbruch.jpg";
-import bottrop from "@/assets/projects/bottrop.jpg";
+import neuenrade from "@/assets/Windpark Neuenrade 1.jpg";
 import schalksmuehleRoeolvede from "@/assets/IMG_1543.jpeg";
 
 interface Project {
@@ -45,22 +43,6 @@ const projects: Project[] = [
     turbines: "6x ENERCON E-115 E1",
     year: "2021",
   },
-  {
-    image: haldeMottbruch,
-    title: "Windpark Halde Mottbruch",
-    client: "Steag GmbH / RWE",
-    turbines: "1x E-138 EP3 auf 131m Hybridturm",
-    year: "2021",
-  },
-  {
-    image: bottrop,
-    title: "Windpark Bottrop Kirchhellen",
-    client: "SL Windenergie GmbH",
-    turbines: "2x E-103 EP2 auf 108m Hybridturm",
-    year: "2023",
-    isRepowering: true,
-    imageRotationDeg: 90,
-  },
 ];
 
 const ProjectsSection = () => {
@@ -69,7 +51,7 @@ const ProjectsSection = () => {
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <p className="text-xs uppercase tracking-wide text-muted-foreground mb-2">Referenzen</p>
+          <p className="text-xs uppercase tracking-wide text-primary mb-2">Einblick in unsere Arbeit</p>
           <h2 className="text-foreground mb-4">Projekte & Referenzen</h2>
           <p className="text-muted-foreground text-lg">
             Ausgewählte Projekte aus unserem Portfolio im Bereich Windenergie.
@@ -122,11 +104,11 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-1">
                   Bauherr: {project.client}
                 </p>
-                <p className="text-muted-foreground text-xs mb-1">
+                <p className="text-muted-foreground text-sm mb-1">
                   Anlagen: {project.turbines}
                 </p>
                 {project.demontage && (
-                  <p className="text-muted-foreground text-xs">
+                  <p className="text-muted-foreground text-sm">
                     Demontage: {project.demontage}
                   </p>
                 )}
