@@ -63,10 +63,10 @@ const AboutSection = () => {
               GRAU Engineering GmbH
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Wir sind ein familiengeführtes Ingenieurbüro mit Sitz in Iserlohn im Sauerland. Seit 2020 beraten wir WEA-Hersteller, Betreiberfirmen und Projektentwickler bei der Umsetzung und Optimierung von Windenergieprojekten.
+              Wir sind ein familiengeführtes Ingenieurbüro mit Sitz in Iserlohn im Sauerland. Seit Januar 2021 unterstützen wir Hersteller von Windenergieanlagen und Betreiberfirmen bei der Umsetzung und Optimierung von Windenergieprojekten.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Als unabhängiger Partner stehen wir für neutrale Beratung und professionelles Projektmanagement. Unser Fokus liegt auf der erfolgreichen Realisierung Ihrer Windenergieprojekte – termingerecht und kosteneffizient. Profitieren Sie von unserer langjährigen Expertise und unserem weitreichendem Netzwerk.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Als unabhängiger Partner stehen wir für neutrale Beratung und professionelles Projektmanagement. Unser Fokus liegt auf der erfolgreichen Realisierung Ihrer Windenergieprojekte – termingerecht und kosteneffizient. Profitieren Sie von unserer langjährigen Expertise und unserem weitreichenden Netzwerk.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ const AboutSection = () => {
                 <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
                   {fact.label}
                 </p>
-                <p className="text-foreground font-semibold text-sm whitespace-pre-line">
+                <p className="text-foreground font-semibold text-lg whitespace-pre-line">
                   {fact.value}
                 </p>
               </div>

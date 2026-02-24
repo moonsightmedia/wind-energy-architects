@@ -77,7 +77,16 @@ const Datenschutz = () => {
 
             <section>
               <h2 className="text-xl font-semibold mb-4 text-foreground">
-                3. Allgemeine Hinweise und Pflichtinformationen
+                3. Cookies
+              </h2>
+              <p>
+                Wir setzen auf dieser Website <strong>keine Analyse-, Marketing- oder Social-Media-Cookies</strong>. Es werden keine Cookies verwendet, die Ihr Nutzungsverhalten auswerten oder an Dritte weitergeben. Soweit beim technischen Abruf der Website durch unseren Hoster oder den Browser temporär technisch notwendige Daten (z. B. Session- oder Lastverteilungsinformationen) verarbeitet werden, erfolgt dies ausschließlich zur Bereitstellung und Sicherheit der Website und ohne Erhebung von Nutzungsprofilen. Ein Cookie-Banner oder eine Einwilligung ist für den Betrieb dieser Website daher nicht erforderlich.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4 text-foreground">
+                4. Allgemeine Hinweise und Pflichtinformationen
               </h2>
               
               <h3 className="text-lg font-semibold mb-3 text-foreground">
@@ -190,7 +199,7 @@ const Datenschutz = () => {
 
             <section>
               <h2 className="text-xl font-semibold mb-4 text-foreground">
-                4. Datenerfassung auf dieser Website
+                5. Datenerfassung auf dieser Website
               </h2>
               
               <h3 className="text-lg font-semibold mb-3 text-foreground">
@@ -209,7 +218,7 @@ const Datenschutz = () => {
 
             <section>
               <h2 className="text-xl font-semibold mb-4 text-foreground">
-                5. Plugins und Tools
+                6. Plugins und Tools
               </h2>
               
               <h3 className="text-lg font-semibold mb-3 text-foreground">

@@ -3,13 +3,8 @@ import { TrendingUp, ShieldCheck, Clock, UserCheck } from "lucide-react";
 const benefits = [
   {
     icon: TrendingUp,
-    title: "Mehr Projekte realisieren",
-    description: "Steigerung Ihrer Projektabschlüsse durch externe Kapazitäten."
-  },
-  {
-    icon: ShieldCheck,
-    title: "Kosten- und Planungssicherheit",
-    description: "Transparente Budgetkontrolle, verlässliche Terminplanung und Reduzierung interner Ressourcen."
+    title: "Steigerung Ihrer Projektabschlüsse",
+    description: "Realisierung zusätzlicher Windparks durch externe Kapazitäten sowie eine erfolgreiche Umsetzung komplexer Standorte."
   },
   {
     icon: Clock,
@@ -17,9 +12,14 @@ const benefits = [
     description: "Effiziente Projekt- und Bauabläufe durch langjährige Expertise und kostenoptimierte Prozesse."
   },
   {
+    icon: ShieldCheck,
+    title: "Kosten- und Planungssicherheit",
+    description: "Transparente Budgetkontrolle und verlässliche Terminplanung."
+  },
+  {
     icon: UserCheck,
     title: "Flexibilität ohne Abhängigkeiten",
-    description: "Reduzierung interner Personalkosten und ressourcenschonende Umsetzung von Projekten."
+    description: "Reduzierung langfristiger Personalkosten und interne Ressourcen."
   }
 ];
 
@@ -29,9 +29,6 @@ const BenefitsSection = () => {
       <div className="container-narrow mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <p className="text-primary text-lg md:text-xl italic font-medium mb-6">
-            „Bauen Sie noch, oder produzieren Sie schon?!"
-          </p>
           <h2 className="text-foreground mb-2">Unser Mehrwert</h2>
           <div className="w-16 h-0.5 bg-primary mx-auto mb-4" aria-hidden />
           <p className="text-muted-foreground text-lg">
@@ -62,6 +59,10 @@ const BenefitsSection = () => {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-muted-foreground text-lg mt-10">
+          Bauen Sie noch, oder produzieren Sie schon?
+        </p>
       </div>
     </section>
   );

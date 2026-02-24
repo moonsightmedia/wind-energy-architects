@@ -60,19 +60,9 @@ const Impressum = () => {
 
             <section>
               <h2 className="text-xl font-semibold mb-4 text-foreground">
-                Geschäftsführung
+                Vertretungsberechtigte
               </h2>
-              <p>
-                Geschäftsführer: Rafael Grau<br />
-                Prokura: Daniel Grau
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-foreground">
-                Stammkapital
-              </h2>
-              <p>25.000 €</p>
+              <p>Geschäftsführer: Rafael Grau</p>
             </section>
 
             <section>
@@ -81,7 +71,7 @@ const Impressum = () => {
               </h2>
               <p>
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                DE [wird nachgereicht]
+                DE400188815
               </p>
             </section>
 
