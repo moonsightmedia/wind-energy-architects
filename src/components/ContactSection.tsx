@@ -25,13 +25,29 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast.success("Vielen Dank für Ihre Anfrage! Wir melden uns zeitnah bei Ihnen.");
-    setFormData({ name: "", firma: "", email: "", nachricht: "" });
-    setIsSubmitting(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          firma: formData.firma,
+          email: formData.email,
+          nachricht: formData.nachricht,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(typeof data?.error === "string" ? data.error : "Sendefehler");
+      }
+      toast.success("Vielen Dank für Ihre Anfrage! Wir melden uns zeitnah bei Ihnen.");
+      setFormData({ name: "", firma: "", email: "", nachricht: "" });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Nachricht konnte nicht gesendet werden.";
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
