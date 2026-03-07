@@ -214,6 +214,9 @@ const Datenschutz = () => {
               <p className="mt-4">
                 Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
               </p>
+              <p className="mt-4">
+                Zum Versand der E-Mails nutzen wir den Dienst Resend (Anbieter: Resend Inc.). Dabei werden Ihre Formulardaten an Resend übermittelt. Informationen zum Datenschutz bei Resend: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://resend.com/legal/privacy-policy</a>.
+              </p>
             </section>
 
             <section>
