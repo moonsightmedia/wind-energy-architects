@@ -193,35 +193,42 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     </html>
   `;
 
-  const [companyResult, customerResult] = await Promise.all([
-    resend.emails.send({
-      from: FROM_EMAIL,
-      to: [TO_EMAIL],
-      replyTo: email,
-      subject,
-      html: htmlToCompany,
-    }),
-    resend.emails.send({
-      from: CONFIRM_FROM_EMAIL,
-      to: [email],
-      subject: confirmSubject,
-      html: htmlToCustomer,
-    }),
-  ]);
+  try {
+    const [companyResult, customerResult] = await Promise.all([
+      resend.emails.send({
+        from: FROM_EMAIL,
+        to: [TO_EMAIL],
+        replyTo: email,
+        subject,
+        html: htmlToCompany,
+      }),
+      resend.emails.send({
+        from: FROM_EMAIL,
+        to: [email],
+        subject: confirmSubject,
+        html: htmlToCustomer,
+      }),
+    ]);
 
-  if (companyResult.error || customerResult.error) {
-    console.error("Resend error (company):", companyResult.error);
-    console.error("Resend error (customer):", customerResult.error);
+    if (companyResult.error || customerResult.error) {
+      console.error("Resend error (company):", companyResult.error);
+      console.error("Resend error (customer):", customerResult.error);
+      return res.status(500).json({
+        error: "E-Mail konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      companyId: companyResult.data?.id,
+      customerId: customerResult.data?.id,
+    });
+  } catch (error) {
+    console.error("Resend exception:", error);
     return res
       .status(500)
       .json({ error: "E-Mail konnte nicht gesendet werden. Bitte versuchen Sie es später erneut." });
   }
-
-  return res.status(200).json({
-    success: true,
-    companyId: companyResult.data?.id,
-    customerId: customerResult.data?.id,
-  });
 }
 
 function escapeHtml(text: string): string {
