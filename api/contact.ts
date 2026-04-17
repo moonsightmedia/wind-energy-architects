@@ -151,7 +151,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 <p style="${valueStyles}">${escapeHtml(nachricht).replace(/\n/g, "<br>")}</p>
 
                 <p style="${footerStyles}">
-                  Diese E-Mail wurde automatisch über das Kontaktformular auf der Website grau-eng.de generiert.
+                  Diese E-Mail wurde automatisch über das Kontaktformular auf der Website grau-engineering.de generiert.
                 </p>
                 ${signatureHtml}
               </div>

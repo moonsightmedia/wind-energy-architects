@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.grau-eng.de/</loc>
+    <loc>https://www.grau-engineering.de/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.grau-eng.de/impressum</loc>
+    <loc>https://www.grau-engineering.de/impressum</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.grau-eng.de/datenschutz</loc>
+    <loc>https://www.grau-engineering.de/datenschutz</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.grau-eng.de/sitemap.xml
+Sitemap: https://www.grau-engineering.de/sitemap.xml
