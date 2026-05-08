@@ -144,7 +144,7 @@
   }
 
   .card-service {
-    @apply bg-card p-6 md:p-8 rounded-md shadow-sm border border-border transition-all duration-300 ease-out hover:shadow-md hover:border-primary/20;
+    @apply h-full flex flex-col bg-card p-6 md:p-8 rounded-md shadow-sm border border-border transition-all duration-300 ease-out hover:shadow-md hover:border-primary/20;
   }
 
   .card-project {

@@ -61,7 +61,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {services.map((service, index) => (
             <div key={index} className="card-service">
               <service.icon className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
@@ -72,9 +72,9 @@ const ServicesSection = () => {
                 {service.description}
               </p>
               {service.bullets && (
-                <div className="mt-3 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-x-4 gap-y-1 text-muted-foreground text-sm leading-relaxed">
+                <div className="mt-2 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-x-4 gap-y-0.5 text-muted-foreground text-sm leading-relaxed">
                   {service.bullets.map((bullet, i) => (
-                    <div key={i} className="flex items-start gap-2">
+                    <div key={i} className="flex items-start gap-1.5">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-sm bg-primary" aria-hidden />
                       <span>{bullet}</span>
                     </div>
