@@ -72,7 +72,7 @@ const ServicesSection = () => {
                 {service.description}
               </p>
               {service.bullets && (
-                <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-muted-foreground text-sm leading-relaxed">
+                <div className="mt-3 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-x-4 gap-y-1 text-muted-foreground text-sm leading-relaxed">
                   {service.bullets.map((bullet, i) => (
                     <div key={i} className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-sm bg-primary" aria-hidden />

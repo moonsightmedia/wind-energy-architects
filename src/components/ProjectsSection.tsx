@@ -29,7 +29,7 @@ const projects: Project[] = [
     year: "2024",
     isRepowering: true,
     demontage: "1x ENERCON E-66 / 18.70",
-    besonderheiten: "Effiziente Flächennutzung zur Erhöhung der Lagerkapazitäten an der Logistikfläche, Einsatz spezieller Transporttechnik für die Umsetzung der Rotorblätter und Stahlsektionen (Blade-Lifter und SPMT), Montage des Kranauslegers teilweise mit über 12 % Steigung zur Errichtung der Windenergieanlage",
+    besonderheiten: "Effiziente Flächennutzung zur Erhöhung der Lagerkapazitäten an der Logistikfläche, Einsatz spezieller Transporttechnik für die Umsetzung der Rotorblätter und Stahlsektionen (Blade-Lifter und SPMT), Montage des Kranauslegers teilweise mit über 12 % Steigung für die späterer Errichtung der Windenergieanlage",
   },
   {
     image: schalksmuehleRoeolvede,
@@ -39,7 +39,7 @@ const projects: Project[] = [
     year: "2025",
     isRepowering: true,
     demontage: "1x Repower MD77",
-    besonderheiten: "Transport der Rotorblätter mit einem Blade-Lifter vom Umladeplatz in Hagen zum Windpark in Rölvede, logistische Herausforderungen aufgrund der lastbeschränkten Brückenbauwerke entlang der A45, Anpassung der Arbeits- und Montagezeiten zur Beschleunigung der Anlagenerrichtung",
+    besonderheiten: "Transport der Rotorblätter mit einem Blade-Lifter vom Umladeplatz in Hagen zum Windpark in Rölvede, Logistische Herausforderungen aufgrund der lastbeschränkten Brückenbauwerke entlang der A45, Anpassung der Arbeits- und Montagezeiten zur Beschleunigung der Anlagenerrichtung",
   },
   {
     image: neuenrade,
@@ -47,7 +47,7 @@ const projects: Project[] = [
     client: "SL Windenergie GmbH",
     turbines: "6x ENERCON E-115 E1",
     year: "2021",
-    besonderheiten: "Waldstandort mit anspruchsvoller windparkinterner Zuwegung, Einsatz von Zughilfen für Großraum- und Schwertransporte, Umsetzung der zweigeteilten Rotorblätter mittels SPMT, Anlieferung vormontierter Anlagenkomponenten „Just-in-Time“ innerhalb des Windparks",
+    besonderheiten: "Waldstandort mit anspruchsvoller windparkinterner Zuwegung, Einsatz von Zughilfen für Großraum- und Schwertransporte, Umsetzung der zweigeteilten Rotorblätter durch den Einsatz eines SPMT, Anlieferung vormontierter Anlagenkomponenten „Just-in-Time“ innerhalb des Windparks",
   },
 ];
 
@@ -110,17 +110,23 @@ const ProjectsSection = () => {
                 <h3 className="text-base font-semibold text-foreground mb-2 leading-snug">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-1">
-                  Bauherr: {project.client}
-                </p>
-                <p className="text-muted-foreground text-sm mb-1">
-                  Anlagen: {project.turbines}
-                </p>
-                {project.demontage && (
-                  <p className="text-muted-foreground text-sm mb-3">
-                    Demontage: {project.demontage}
-                  </p>
-                )}
+                <div className="grid grid-cols-[max-content_1fr] gap-x-2 gap-y-1 text-muted-foreground text-sm mb-3">
+                  <span>Bauherr:</span>
+                  <span>{project.client}</span>
+                  <span>Anlagen:</span>
+                  <span>{project.turbines}</span>
+                  {project.demontage ? (
+                    <>
+                      <span>Demontage:</span>
+                      <span>{project.demontage}</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="invisible">Demontage:</span>
+                      <span className="invisible">-</span>
+                    </>
+                  )}
+                </div>
                 {project.besonderheiten && (
                   <div className="mt-auto pt-3 -mx-5 -mb-5">
                     <button

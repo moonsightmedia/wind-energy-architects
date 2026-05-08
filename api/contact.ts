@@ -4,7 +4,7 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 /** Company inbox – contact form submissions are sent here */
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@grau-eng.de";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "rafael.grau@grau-eng.de";
 /**
  * Sender-Adresse für alle ausgehenden E-Mails (an euch und an den Kunden).
  * Standard: reine Adresse ohne Namen.
