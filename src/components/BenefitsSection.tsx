@@ -60,7 +60,7 @@ const BenefitsSection = () => {
           ))}
         </div>
 
-        <p className="text-center text-primary font-bold text-lg mt-10">
+        <p className="text-center text-primary font-bold text-base sm:text-lg mt-10 whitespace-nowrap">
           Bauen Sie noch, oder produzieren Sie schon?
         </p>
       </div>

@@ -29,7 +29,7 @@ const projects: Project[] = [
     year: "2024",
     isRepowering: true,
     demontage: "1x ENERCON E-66 / 18.70",
-    besonderheiten: "Effiziente Flächennutzung zur Erhöhung der Lagerkapazitäten an der Logistikfläche, Einsatz spezieller Transporttechnik für die Umsetzung der Rotorblätter und Stahlsektionen (Blade-Lifter und SPMT), Montage des Kranauslegers teilweise mit über 12 % Steigung für die späterer Errichtung der Windenergieanlage",
+    besonderheiten: "Effiziente Flächennutzung zur Erhöhung der Lagerkapazitäten an der Logistikfläche, Einsatz spezieller Transporttechnik für die Umsetzung der Rotorblätter und Stahlsektionen (Blade-Lifter und SPMT), Montage des Kranauslegers teilweise mit über 12 % Steigung für die spätere Errichtung der Windenergieanlage",
   },
   {
     image: schalksmuehleRoeolvede,
